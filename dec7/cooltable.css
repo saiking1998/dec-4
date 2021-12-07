@@ -1,29 +1,32 @@
-.cool{
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 800px;
-    border-radius: 25px;
-    overflow: hidden;
-     text-align: left;
-    box-shadow: 0 20px 20px rgba(0, 0, 0,0.15);
-  }
-  
-  .heading{
-    background-color: #215A8E;
-    color: white;
-   
-     font-weight: bold;
-  }
-  
-  .cool th,.cool td{
-    padding: 12px 15px;
-  }
-  .cool tbody tr{
-    border-bottom: 1px solid #dddddd;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
-  }
-  .cool tbody tr:nth-of-type(even){
-    background-color: #f3f3f3;
-  }
+body {
+  font-family: "Poppins", "Verdana", sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 1.25em;
+}
+
+table {
+  width: 100%;
+  max-width: 1200px;
+  border-spacing: 0;
+  border-radius: 1em;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  margin: auto;
+}
+
+th {
+  background: #215a8e;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 1em;
+  color: #fff;
+}
+
+td {
+  padding: 1em;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
