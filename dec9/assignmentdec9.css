@@ -6,6 +6,7 @@
     height: 820px;
     margin: auto;
     padding-top: 20px;
+
 }
 .longbox
 {
@@ -14,6 +15,7 @@
     height: 50px;
     opacity: 0.8;
     float: left;
+    margin-left: 10px;
 }
 .small
 {
