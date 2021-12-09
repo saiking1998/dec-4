@@ -10,6 +10,12 @@ body{
     float: left;
     
 }
+.container{
+    background-color: cadetblue;
+    display: flex;
+    border-radius: 7px;
+    justify-content: space-between;
+}
 img{
 
     height: 250px;
