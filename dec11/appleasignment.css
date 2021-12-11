@@ -25,6 +25,9 @@ body{
     border-radius: 10px;
     height: 500px;
 }
+.photo-main img{
+    margin-left: -50px;
+}
 .photo-album li{
     min-width: fit-content;
     min-height: 60px ;
