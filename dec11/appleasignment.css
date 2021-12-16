@@ -1,5 +1,6 @@
 body{
     background-color: rgba(16,227,127,255);
+    background: radial-gradient(white,rgba(16,227,127,255));
 }
 .product{
     background-color: white;
@@ -23,17 +24,21 @@ body{
 .photo-main {
     background-color: #B1E837;
     border-radius: 10px;
-    height: 500px;
+    height: 450px;
+    background:radial-gradient(white,green) ;
 }
 .photo-main img{
     margin-left: -50px;
+    filter: brightness(105%);
+    
 }
 .photo-album li{
     min-width: fit-content;
     min-height: 60px ;
     display: inline-block ;
     box-shadow: gray;
-    border: 2px solid #d1d1d1;
+    border: 0.5px solid #d1d1d1;
+    
 }
 .photo-album li:hover{
     cursor: pointer;
@@ -80,7 +85,7 @@ body{
 .variant li{
     display: inline-block;
     border-radius: 5px;
-    padding-left: ;
+    
     margin: 2px;
 }
 .variant li:hover{
@@ -108,24 +113,24 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     color: #444444;
 }
-.controls i{
+.photo-main .controls {
     color: white;
-    align-items: ;
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
 }
-.controls i:hover{
+.photo-main .controls i{
     cursor: pointer;
 }
 .fa-heart-o:active{
-    background-color: red;
+   color: indianred;
 }
-.fa-heart-o{
-    margin-left: 310px;
-}
+
 .fa-share-alt:active{
     background-color: blue;
 }
 .buy--btn{
-    background-color: orangered;
+    background-color: indianred;
     margin-left: 20px;
     margin-top: 20px;
     width: 150px;
@@ -134,4 +139,7 @@ body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     color: white;
     box-shadow: 4px 3px 8px 1px #969696;
+}
+.buy--btn:active{
+    transform: scale(0.95);
 }
