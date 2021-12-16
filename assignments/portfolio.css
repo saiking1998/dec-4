@@ -115,6 +115,9 @@ hr{
     border-radius: 5px;
     background-color: rgb(59, 132, 214);
 }
+.btn:hover{
+    color: white;
+}
 .bottom-section{
     text-align: center;
       background-color: rgb(189, 226, 101);
@@ -123,5 +126,10 @@ hr{
     background: radial-gradient(white 1%,rgb(101, 201, 226) 99%);
 }
 .bottom-section a{
+    margin: 10px 20px;
+    text-decoration: none; 
     cursor: pointer;
+}
+.bottom-section a:hover{
+    color: black;
 }
