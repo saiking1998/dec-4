@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a =[1 , 2 , 3 , 4 ,5]
+        let b =[]
+         let reqelement=2
+        let ele = 'sai'
+        for(let k= 0;k<a.length;k++)
+    {
+        if(k == reqelement-1){
+          b[k] = ele
+          b[k+1]=a[k]
+        }
+        else if(k<reqelement){
+            b[k]=a[k]
+        }
+        else{
+            b[k+1] = a[k]
+        }
+    }  
+    console.log(b)    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
