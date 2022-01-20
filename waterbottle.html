@@ -78,7 +78,7 @@
 
         .remained small {
             font-size: 12px;
-            
+
         }
 
         .percentage {
@@ -110,9 +110,9 @@
     <div class="cup">
 
         <div class="remained" id="remained">
-            <span id="liters">
+            <span id="liters"> </span>
                 <small>Remained</small>
-            </span>
+           
         </div>
         <div class="percentage" id="percentage"></div>
     </div>
@@ -169,13 +169,13 @@
                 percentage.innerText = `${fullcups / totalcups * 100}%`
                 percentage.style.height = `${fullcups / totalcups * 330}px`
             }
-            if(fullcups===totalcups){
-                remained.style.height =0
+            if (fullcups === totalcups) {
+                remained.style.height = 0
                 remained.style.visibility = 'hidden'
             }
-            else{
+            else {
                 remained.style.visibility = 'visible'
-                liters.innerText = `${2-(0.25*fullcups)}L`
+                liters.innerText = `${2 - (0.25 * fullcups)}L`
             }
         }
 
