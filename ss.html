@@ -5,10 +5,18 @@
     <title>Document</title>
 </head>
 <body>
+<script>
 
-    <form action="">
-        <a href=""></a>
-    </form>
+    let arr = [0,1,6]
+    let arr2 =[]
+    let max = Math.max(...arr);
     
+    for(let i = 0;i<max;i++) {
+        if(arr.indexOf(i)===-1){
+            arr2.push(i)
+        }
+    }
+    console.log(`the missing elements are ${arr2}`)
+</script>
 </body>
 </html>
