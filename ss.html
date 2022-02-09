@@ -60,39 +60,64 @@
     // async function abc(){
     //   return await setTimeout(function(){
     //      return Promise.resolve('Resolved after 3 secs')
-    //   }, 3000)
+    // //   }, 3000)
+    // // }
+
+    // // async function display(){
+    // //   return await abc().then(function(resolvedMessage){
+    // //     return resolvedMessage
+    // //   })
+    // // }
+
+    // // abc().then(function(resolvedMessage){
+    // //   console.log(resolvedMessage)
+    // // }).catch(function(rejectedMessage){
+    // //   console.log(rejectedMessage)
+    // // })
+
+
+
+    // async function abc(){
+      
+    //     await new Promise(function(resolve,reject){
+    //       setTimeout(function(){
+    //         resolve()
+    //       },3000)
+    //     })
+    //     return 'uiofsdtgk;ufg'
     // }
 
     // async function display(){
-    //   return await abc().then(function(resolvedMessage){
-    //     return resolvedMessage
-    //   })
+    //  let msg = await abc()
+    //  console.log(msg)
     // }
 
-    // abc().then(function(resolvedMessage){
-    //   console.log(resolvedMessage)
-    // }).catch(function(rejectedMessage){
-    //   console.log(rejectedMessage)
-    // })
+    // display()
+    // let sum =''
+    // for(x in { name : 'ram', class : 'class'})
+    // sum=sum + x
+    // console.log(sum)
+  //  console.log( [3,4,5].forEach(element =>{return element+1}))
+// [-2,2,-2].map(e=>-e)
+// console.log(e.length)
+// let prm = new Promise(function(resolve, reject){
+//   resolve (!null ?0:1)
+// })
+// prm.then((resolvedmag)=>{
+//   console.log(resolvedmag?0:1)
+// })
+// // console.log('0' ? 0:1)
+// (function resolve(){
+//   console.log('undefined')
+// })()
 
-
-
-    async function abc(){
-      
-        await new Promise(function(resolve,reject){
-          setTimeout(function(){
-            resolve()
-          },3000)
-        })
-        return 'uiofsdtgk;ufg'
-    }
-
-    async function display(){
-     let msg = await abc()
-     console.log(msg)
-    }
-
-    display()
+// function resolve(){
+//   let y=10
+//   return function(){return y}
+// }
+// console.log(resolve()())
+console.log('5'/5+5*'5')
 </script>
+
 </body>
 </html>
