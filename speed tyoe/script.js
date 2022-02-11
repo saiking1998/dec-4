@@ -1,4 +1,4 @@
-const apiurl = 'http://api.quotable.io/random'
+const apiurl = 'https://api.quotable.io/random'
 
 const quotedisplay = document.getElementById('quotedisp')
 const quoteinput = document.getElementById('quotein')
@@ -26,7 +26,7 @@ quoteinput.addEventListener('input', () => {
             correct = false
         }
     })
-    if(correct) {
+    if (correct) {
         getnewapi()
     }
 
@@ -39,10 +39,10 @@ function newapi() {
 async function getnewapi() {
     const quote = await newapi()
     quotedisplay.innerHTML = ''
-    
+
     quote.split('').forEach(charecter => {
         const charspan = document.createElement('span')
-       
+
         charspan.innerText = charecter
         quotedisplay.appendChild(charspan)
     })
