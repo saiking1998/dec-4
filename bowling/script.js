@@ -194,6 +194,8 @@ function checkmorerolls() {
             }
             else{
                 console.log("e;ofutgeasf")
+                show.innerText = '';
+                show.innerText = 'click to get your score'
                 checkscore()
                 return
             }
