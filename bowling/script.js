@@ -107,94 +107,99 @@ function roll1() {
 function checkmorerolls() {
     console.log("ekfyhgvejkfvjkye")
     if (count >= 10 && count <= 11) {
-
-        if (Array1[Array1.length - 1] == 10 && Array1[Array1.length - 2] != 0) {
-            show.innerText = '';
-            show.innerText = 'you rolled strike in previous round so u get two maorestrike'
-            roolval = 1
-            count = 0
-            maxcount = 2
-
-            if (count < maxcount) {
-                var bool = true
-                newrool = Math.floor(Math.random() * 10) + 1
-                // addtoarray()
-                Array1.push(newrool)
-                previous = newrool;
-                numberrolled.innerText = '';
-                numberrolled.innerText = newrool;
-                if (newrool == 10) {
-                    show.innerText = '';
-                    show.innerText = 'Wooohooo!! Strike keep going'
-                }
-                ball.classList.add('play');
-                console.log(ball)
-                setTimeout(() => {
-                    ball.classList.remove('play')
+        ball.addEventListener('click',roll2)
+        function roll2() {
+            if (Array1[Array1.length - 1] == 10 && Array1[Array1.length - 2] != 0) {
+                show.innerText = '';
+                show.innerText = 'you rolled strike in previous round so u get two maorestrike'
+                roolval = 1
+                count = 0
+                maxcount = 2
+                
+                if (count < maxcount) {
+                    var bool = true
+                    newrool = Math.floor(Math.random() * 10) + 1
+                    // addtoarray()
+                    Array1.push(newrool)
+                    previous = newrool;
+                    numberrolled.innerText = '';
+                    numberrolled.innerText = newrool;
+                    if (newrool == 10) {
+                        show.innerText = '';
+                        show.innerText = 'Wooohooo!! Strike keep going'
+                    }
+                    ball.classList.add('play');
                     console.log(ball)
-                }, 2000)
-
-                console.log(Array1)
-                if (newrool == 10) {
-                    count++;
-                    console.log(count)
-
+                    setTimeout(() => {
+                        ball.classList.remove('play')
+                        console.log(ball)
+                    }, 2000)
+    
+                    console.log(Array1)
+                    if (newrool == 10) {
+                        count++;
+                        console.log(count)
+    
+                    }
+                    if (count >= maxcount) {
+                        ball.removeEventListener('click',roll2)
+                        bool = false
+                        checkscore()
+                    }
+                    console.log(bool)
+    
+                    return
                 }
-                if (count >= maxcount) {
-                    ball.removeEventListener('click')
-                    bool = false
-                    checkscore()
+            }
+            else if (Array1[Array1.length - 1] + Array1[Array1.length - 2] == 10) {
+                show.innerText = '';
+                show.innerText = 'you rolled spare in previous round so u get one more estrike'
+                roolval = 1
+                maxcount = 1
+                count = 0
+                if (count < maxcount) {
+                    var bool = true
+                    newrool = Math.floor(Math.random() * 10) + 1
+                    // addtoarray()
+                    Array1.push(newrool)
+                    previous = newrool;
+                    numberrolled.innerText = '';
+                    numberrolled.innerText = newrool;
+                    if (newrool == 10) {
+                        show.innerText = '';
+                        show.innerText = 'Wooohooo!! Strike keep going'
+                    }
+                    ball.classList.add('play');
+                    console.log(ball)
+                    setTimeout(() => {
+                        ball.classList.remove('play')
+                        console.log(ball)
+                    }, 2000)
+    
+                    console.log(Array1)
+                    if (newrool == 10) {
+                        count++;
+                        console.log(count)
+    
+                    }
+                    if (count >= maxcount) {
+                        ball.removeEventListener('click',roll2)
+                        bool = false
+                        checkscore()
+                    }
+                    console.log(bool)
+    
+                    return
                 }
-                console.log(bool)
-
+            }
+            else{
+                console.log("e;ofutgeasf")
+                checkscore()
                 return
             }
         }
-        else if (Array1[Array1.length - 1] + Array1[Array1.length - 2] == 10) {
-            show.innerText = '';
-            show.innerText = 'you rolled spare in previous round so u get one more estrike'
-            roolval = 1
-            maxcount = 1
-            count = 0
-            if (count < maxcount) {
-                var bool = true
-                newrool = Math.floor(Math.random() * 10) + 1
-                // addtoarray()
-                Array1.push(newrool)
-                previous = newrool;
-                numberrolled.innerText = '';
-                numberrolled.innerText = newrool;
-                if (newrool == 10) {
-                    show.innerText = '';
-                    show.innerText = 'Wooohooo!! Strike keep going'
-                }
-                ball.classList.add('play');
-                console.log(ball)
-                setTimeout(() => {
-                    ball.classList.remove('play')
-                    console.log(ball)
-                }, 2000)
 
-                console.log(Array1)
-                if (newrool == 10) {
-                    count++;
-                    console.log(count)
-
-                }
-                if (count >= maxcount) {
-                    ball.removeEventListener('click')
-                    bool = false
-                    checkscore()
-                }
-                console.log(bool)
-
-                return
-            }
-        }
-        else{
-            console.log("e;ofutgeasf")
-            checkscore()
-        }
+   
     }
 }
 
