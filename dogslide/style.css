@@ -31,12 +31,16 @@ margin: 10px 10%;
 }
 .image-container img{
     width: 30%;
-    padding:10px;
+    margin:15px;
     margin-top: 5px;
     border-radius:10%;
 }
 .image-container img:hover{
-    box-shadow:10px 10px 8px 10px #684848;
+    box-shadow:10px 10px 8px 10px #000000;
+    
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform: rotateY(360deg)
 }
 
 @media screen and(max-width:1000px)

@@ -46,7 +46,7 @@ function displayPhotos() {
   });
 }
 async function getPhotos() {
-  const query = "sports car";
+  const query = "car";
   const count = 10;
   const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${APIkey}&count=${count}&query=${query}&orientation=squarish;`;
 
