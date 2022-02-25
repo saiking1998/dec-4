@@ -2,6 +2,7 @@ const ball = document.querySelector('.ball');
 const numberrolled = document.querySelector('.SSS');
 const show = document.querySelector('.show')
 const container = document.querySelector('.container')
+const reset = document.querySelector('.reset')
 console.log(numberrolled)
 let count = 0;
 let maxcount = 10;
@@ -16,7 +17,7 @@ var finalarray = []
 ball.addEventListener('click', roll1)
 
 function roll1() {
-    var bool = true
+    
     if (roolval == 1 && count < maxcount) {
         newrool = Math.floor(Math.random() * 10) + 1
         // addtoarray()
@@ -52,10 +53,10 @@ function roll1() {
         }
         if (count >= maxcount) {
             ball.removeEventListener('click', roll1)
-            bool = false
+           
             checkmorerolls()
         }
-        console.log(bool)
+       
 
         return
     }
@@ -96,10 +97,10 @@ function roll1() {
     }
     if (count >= maxcount) {
         ball.removeEventListener('click', roll1)
-        bool = false;
+       
         checkmorerolls()
     }
-    console.log(bool)
+    
     return
 }
 
@@ -117,7 +118,7 @@ function checkmorerolls() {
                 maxcount = 2
                 
                 if (count < maxcount) {
-                    var bool = true
+                   
                     newrool = Math.floor(Math.random() * 10) + 1
                     // addtoarray()
                     Array1.push(newrool)
@@ -129,24 +130,24 @@ function checkmorerolls() {
                         show.innerText = 'Wooohooo!! Strike keep going'
                     }
                     ball.classList.add('play');
-                    console.log(ball)
+                
                     setTimeout(() => {
                         ball.classList.remove('play')
-                        console.log(ball)
+                        
                     }, 2000)
     
                     console.log(Array1)
                     if (newrool == 10) {
                         count++;
-                        console.log(count)
+                        
     
                     }
                     if (count >= maxcount) {
                         ball.removeEventListener('click',roll2)
-                        bool = false
+                        
                         checkscore()
                     }
-                    console.log(bool)
+                   
     
                     return
                 }
@@ -158,7 +159,7 @@ function checkmorerolls() {
                 maxcount = 1
                 count = 0
                 if (count < maxcount) {
-                    var bool = true
+                    
                     newrool = Math.floor(Math.random() * 10) + 1
                     // addtoarray()
                     Array1.push(newrool)
@@ -184,10 +185,10 @@ function checkmorerolls() {
                     }
                     if (count >= maxcount) {
                         ball.removeEventListener('click',roll2)
-                        bool = false
+                        
                         checkscore()
                     }
-                    console.log(bool)
+                    
     
                     return
                 }
@@ -243,11 +244,17 @@ function checkscore() {
         }
         container.style.marginTop='20%';
         ball.style.display='none';
+        reset.style.display='block';
+
         show.innerText = '';
             show.innerText = `your every round score is ${finalscore} and your total score ${totalscore}`
 
     }
     game(Array1)
+}
+reset.addEventListener('click',reload)
+function reload(){
+    location.reload();
 }
 
 
