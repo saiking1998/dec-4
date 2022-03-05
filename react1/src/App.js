@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import './App.css';
 import HelloWorld from'./componenet/Componenet1';
+import CounterClass from'./componenet/CounterClass';
 // function App() {
 //   return (
 //     <div className="App">
@@ -21,7 +22,8 @@ class App  extends Component{
    return (
         <div className="App">
         
-        <HelloWorld />
+        <HelloWorld  />
+        <CounterClass />
        
         </div>
       );
