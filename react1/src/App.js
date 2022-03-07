@@ -1,7 +1,9 @@
 import React,{Component} from 'react';
 import './App.css';
-import HelloWorld from'./componenet/Componenet1';
-import CounterClass from'./componenet/CounterClass';
+// import HelloWorld from'./componenet/Componenet1';
+// import CounterClass from'./componenet/CounterClass';
+import RectBoot from './componenet/RectBoot';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // function App() {
 //   return (
 //     <div className="App">
@@ -21,9 +23,9 @@ class App  extends Component{
   render() {
    return (
         <div className="App">
-        
-        <HelloWorld  />
-        <CounterClass />
+        <RectBoot />
+        {/* <HelloWorld  />
+        <CounterClass /> */}
        
         </div>
       );
