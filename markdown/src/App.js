@@ -12,9 +12,15 @@ import ReactMarkdown from 'react-markdown';
 class App extends React.Component {
   constructor(props){
     super(props);
-    this.state = ({
-      markdown:""
-    })
+    this.state = {
+      markdown:"",
+      loading:true
+    }
+    this.handleChange = this.handleChange.bind(this);
+    this.chnageloadingVar = this.chnageloadingVar.bind(this);
+  }
+  chnageloadingVar(){
+       this.setState({loading:false})
   }
   handleChange(e){
     this.setState({
@@ -22,9 +28,13 @@ class App extends React.Component {
     })
   }
   render() {
+    if(this.state.loading){
+      setTimeout(this.chnageloadingVar,3000)
+      return(<div><h1>....Loading....</h1></div>)
+    }
     return (
       <div className="App">
-        <textarea onChange={this.handleChange.bind(this)}/>
+        <textarea onChange={this.handleChange}/>
         <ReactMarkdown className='Preview' children={this.state.markdown}/>
         </div>
     )
