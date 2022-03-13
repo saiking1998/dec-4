@@ -8,7 +8,7 @@ let photosArray = [];
 let totalImages = 0;
 let imagesLoaded = 0;
 let ready = false;
-
+var name = window.prompt("what do u want to see");
 function setAttributes(element, attributes) {
   for (const key in attributes) {
     element.setAttribute(key, attributes[key]);
@@ -46,7 +46,7 @@ function displayPhotos() {
   });
 }
 async function getPhotos() {
-  const query = "car";
+  const query = name;
   const count = 10;
   const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${APIkey}&count=${count}&query=${query}&orientation=squarish;`;
 
