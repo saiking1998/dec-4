@@ -7,6 +7,7 @@ import Landingpage from "./components/Landingpage";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
+
   return (
     <Router>
       <Container>
