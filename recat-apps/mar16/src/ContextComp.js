@@ -4,8 +4,8 @@ const UserContext = createContext();
 const CityContext = createContext();
 
 const ContextComp = () => {
-  const [user, setUser] = useState("Rohan Dutt");
-  const [city, setCity] = useState("Agra");
+  const [user, setUser] = useState("Sai KRISHNA");
+  const [city, setCity] = useState("Hyd");
 
   return (
     <UserContext.Provider value={user}>
